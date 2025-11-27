@@ -85,7 +85,24 @@
           Ready to make your business more sustainable? Contact us today for a
           consultation.
         </p>
-        <p>Form coming soon!</p>
+        <form class="contact-form">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <span class="error-message">Name cannot be empty.</span>
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <span class="error-message">Please enter a valid email.</span>
+  </div>
+  <div class="form-group">
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="6" required></textarea>
+    <span class="error-message">Message cannot be empty.</span>
+  </div>
+  <button type="submit" class="btn">Send Message</button>
+</form>
       </section>
     </main>
     <footer>
