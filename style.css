@@ -1,3 +1,333 @@
+/* =========================================
+   EcoSolutions - Core Stylesheet
+   ========================================= */
+
+/* -----------------------------------------
+   1. RESET & GLOBAL VARIABLES
+   Necessary settings for consistency across browsers
+   and defining the site's theme.
+   ----------------------------------------- */
+
+/* The Universal Reset: Ensures padding and borders don't affect element width */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CSS Variables (Custom Properties) used throughout the site */
+:root {
+  /* Professional Color Palette */
+  --color-primary: #3d8c40; /* Deep professional green */
+  --color-secondary: #34495e; /* Dark blue-gray for strong elements */
+  --color-accent: #daa520; /* Muted gold for highlights */
+  --color-text-body: #333333; /* Dark gray for readability */
+  --color-text-light: #f8f8f8; /* Off-white for dark backgrounds */
+  --color-bg-light: #ffffff; /* Pure white background */
+  --color-bg-alt: #f4f4f4; /* Light gray for alternating sections */
+  --color-border: #e0e0e0; /* Subtle border color */
+
+  /* Font Stacks (using system defaults as backups) */
+  --font-body: 'Open Sans', Helvetica, Arial, sans-serif;
+  --font-heading: 'Roboto Slab', Georgia, serif;
+
+  /* Spacing consistency */
+  --section-padding: 4rem 1rem; /* Top/Bottom, Left/Right */
+}
+
+/* -----------------------------------------
+   2. BASE TYPOGRAPHY & ELEMENTS
+   Setting default looks for standard HTML tags.
+   ----------------------------------------- */
+
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+}
+
 body {
-    font-size: 15pt;
+  font-family: var(--font-body);
+  line-height: 1.6; /* Improves readability */
+  color: var(--color-text-body);
+  background-color: var(--color-bg-light);
+}
+
+/* Heading styles */
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Link styles */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+/* Image defaults */
+img {
+  max-width: 100%; /* Ensures images never overflow their container */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Removes space below inline images */
+}
+
+/* -----------------------------------------
+   3. UTILITY CLASSES
+   Reusable classes for common layout needs.
+   ----------------------------------------- */
+
+/* Limits width on large screens and centers content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem; /* gutters for smaller screens */
+}
+
+/* Centers text alignment */
+.text-center {
+  text-align: center;
+}
+
+/* Standard button style */
+.btn {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--color-secondary);
+}
+
+/* -----------------------------------------
+   4. HEADER & NAVIGATION
+   ----------------------------------------- */
+
+header {
+  background-color: var(--color-bg-light);
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem 0;
+  position: sticky; /* Keeps header at top while scrolling */
+  top: 0;
+  z-index: 100; /* Ensures header stays above other content */
+}
+
+/* Flex container to align Logo and Nav */
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  max-width: 10%;
+  height: 10%; /* Maintains aspect ratio */
+  display: block; /* Removes space below inline images */
+}
+
+.main-nav ul {
+  list-style: none; /* Removes bullet points */
+  display: flex; /* Makes list items horizontal */
+  gap: 1.5rem; /* Spacing between links */
+}
+
+.main-nav a {
+  color: var(--color-secondary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Hidden on desktop, intended for mobile later */
+.hamburger-menu {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* -----------------------------------------
+   5. HERO SECTION (Above the fold)
+   ----------------------------------------- */
+
+#hero {
+  /* Set height to 80% of the viewport height */
+  height: 80vh;
+  background-image: url('/images/herobg.png');
+  background-size: cover; /* Ensures image covers the area */
+  background-position: center;
+  position: relative; /* Need
+  ed for the overlay */
+  /* Flexbox to center content vertically and horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-text-light);
+}
+
+/* Dark overlay to improve text readability on background images */
+#hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(44, 62, 80, 0.7); /* Dark blue overlay with opacity */
+  z-index: 1;
+}
+
+/* Ensures content sits above the overlay */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 1rem;
+}
+
+#hero h1 {
+  color: var(--color-text-light);
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+/* -----------------------------------------
+   6. GENERAL SECTIONS (About, Services, Contact)
+   ----------------------------------------- */
+
+section {
+  padding: var(--section-padding);
+}
+
+/* Alternating background color for visual separation */
+#services {
+  background-color: var(--color-bg-alt);
+}
+
+/* -----------------------------------------
+   7. COMPONENTS (Cards & Forms)
+   ----------------------------------------- */
+
+/* Service Grid Layout - Mobile First (1 column) */
+.service-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.service-card {
+  background: var(--color-bg-light);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+  text-align: center;
+}
+
+.service-card .icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* Basic Form Styling */
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto 0; /* Center the form */
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* Inputs and Textareas fill width */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-family: inherit; /* Ensures inputs use site font */
+}
+
+/* -----------------------------------------
+   8. FOOTER
+   ----------------------------------------- */
+
+footer {
+  background-color: var(--color-secondary);
+  color: var(--color-text-light);
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.footer-nav ul {
+  justify-content: center; /* Center nav links in footer */
+  margin-bottom: 1.5rem;
+}
+
+.footer-nav a {
+  color: var(--color-text-light);
+  font-weight: 400;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* -----------------------------------------
+   9. MEDIA QUERIES (Basic Responsiveness)
+   Simple adjustments for larger screens.
+   ----------------------------------------- */
+
+/* Tablet and up (min-width: 768px) */
+@media (min-width: 768px) {
+  /* Switch service grid to 3 columns */
+  .service-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Increase hero heading size */
+  #hero h1 {
+    font-size: 4rem;
+  }
 }
