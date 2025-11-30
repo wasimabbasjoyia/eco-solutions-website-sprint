@@ -8,7 +8,7 @@ A professional, responsive website for EcoSolutions, a sustainable consulting fi
 
 ## Table of Contents
 
-1.  [Project Overview](#project-overview)
+1.  [Project Overview](##project-overview)
 2.  [Features](#features)
 3.  [Live Demo](#live-demo) (Once deployed)
 4.  [Technology Stack](#technology-stack)
