@@ -1,6 +1,6 @@
 # EcoSolutions: Sustainable Consulting Website
 
-![EcoSolutions Logo Concept 1](docs/logo_concept_1.png)
+![EcoSolutions Logo Concept 1](images/logo.png)
 
 A professional, responsive website for EcoSolutions, a sustainable consulting firm. This project is built following modern web development best practices, focusing on semantic HTML, a robust CSS architecture with variables, and essential JavaScript for enhanced user experience.
 
