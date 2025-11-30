@@ -40,7 +40,9 @@ This project was completed rapidly over three days, emphasizing modularity, main
 
 ## 3. Live Demo
 
-https://wasimabbasjoyia.github.io/eco-solutions-website-sprint/
+[Link to your live demo here once deployed!](https://wasimabbasjoyia.github.io/eco-solutions-website-sprint/)
+
+*(Once you've deployed your project to GitHub Pages, this link will become active. If your main `index.html` is in the root of the repo, this should be the correct format.)*
 
 ## 4. Technology Stack
 
