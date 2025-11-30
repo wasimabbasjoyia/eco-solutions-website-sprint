@@ -40,7 +40,7 @@ This project was completed rapidly over three days, emphasizing modularity, main
 
 ## 3. Live Demo
 
-[Link to your live demo here once deployed!](https://wasimabbasjoyia.github.io/eco-solutions-website-sprint/)
+[Link to your live demo here once deployed!](<https://wasimabbasjoyia.github.io/eco-solutions-website-sprint/>)
 
 *(Once you've deployed your project to GitHub Pages, this link will become active. If your main `index.html` is in the root of the repo, this should be the correct format.)*
 
@@ -126,7 +126,7 @@ This project is open-source and available under the [MIT License](LICENSE).
 
 If you have any questions or feedback, feel free to reach out!
 
-**Wasim Abbas Joyia** - [wasimabbasjoyia@gmail.com](mailto:wasimabbasjoyia@gmail.com)
-Project Repository: [https://github.com/wasimabbasjoyia/eco-solutions-website-sprint](https://github.com/wasimabbasjoyia/eco-solutions-website-sprint)
+**Wasim Abbas Joyia** - [<wasimabbasjoyia@gmail.com>](mailto:wasimabbasjoyia@gmail.com)
+Project Repository: <https://github.com/wasimabbasjoyia/eco-solutions-website-sprint>
 
 ---
